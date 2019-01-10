@@ -1,3 +1,4 @@
+var path = require('path')
 module.exports = {
 	lintOnSave: false,
 	// 基本路径
@@ -13,10 +14,17 @@ module.exports = {
 				ws: true,
 				changeOrigin: true,
 				pathRewrite: {
-                    '^/yj': 'http://172.16.70.66:8767'
-                }
+					'^/yj': 'http://172.16.70.66:8767'
+				}
 			}
 		},  // 配置多个代理
+	},
+	css: {
+		loaderOptions: {
+			stylus: {
+				import: path.resolve(__dirname, './src/stylus/variable.styl')
+			},
+		}
 	}
 
 }
