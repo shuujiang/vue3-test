@@ -1,11 +1,11 @@
 <template>
 	<div>
-
+		
 	</div>
 </template>
 
-import {mapState} from 'vuex'
 <script>
+import {mapState} from 'vuex'
  export default {
 	data () {
 		return {
